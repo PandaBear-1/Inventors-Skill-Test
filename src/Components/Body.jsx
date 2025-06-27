@@ -69,7 +69,7 @@ function Body() {
 
 
 
-        <CardRow>
+        <CardRow showButtons = {false} >
            {searchResult && <div>
              <h2 className=" text-4xl pl-10" >Search Result</h2>
             {filteredCountries.length > 0 ?
@@ -84,29 +84,29 @@ function Body() {
             </div>}
         </CardRow> 
 
-     <CardRow >
-        { countries.map((country, index)=> index <= 10 && (
-        <Card key={index} country= {country} />
-    ))}
-     </CardRow>
+      <CardRow >
+          { countries.map((country, index)=> index <= 10 && (
+          <Card key={index} country= {country} />
+      ))}
+      </CardRow>
 
-     <CardRow> 
-        { countries.map((country, index)=> index > 10 && index <= 20 && (
-            <Card key={index} country= {country} />
-        ))}
-     </CardRow>
+      <CardRow> 
+          { countries.map((country, index)=> index > 10 && index <= 20 && (
+              <Card key={index} country= {country} />
+          ))}
+      </CardRow>
 
-     <CardRow>
-     { countries.map((country, index)=> index > 20 && index <= 30 && (
-        <Card key={index} country= {country} />
-    ))}
-    </CardRow> 
+      <CardRow>
+      { countries.map((country, index)=> index > 20 && index <= 30 && (
+          <Card key={index} country= {country} />
+      ))}
+      </CardRow> 
 
-    <CardRow>
-     { countries.map((country, index)=> index > 30 && index <= 40 && (
-        <Card key={index} country= {country} />
-    ))}
-    </CardRow> 
+      <CardRow>
+      { countries.map((country, index)=> index > 30 && index <= 40 && (
+          <Card key={index} country= {country} />
+      ))}
+      </CardRow> 
 
     </div>
   )
