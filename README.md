@@ -16,3 +16,5 @@ A simple React app that fetches country data from a public API and displays it i
 - React
 - Tailwind
 - REST Countries API
+
+Hosted Link: https://inventors-skill-test.vercel.app/
