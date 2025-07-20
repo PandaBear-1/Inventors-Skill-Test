@@ -36,9 +36,9 @@ function Body() {
 
 
   return (
-    <div className="bg-[#1F1C2C]  " >
+    <div className="bg-[#1F1C2C] px-5  " >
 
-        <label className="block w-full md:w-1/2 mb-4 pt-4 pl-10">
+        <label className="block w-3/4 md:w-1/2 mb-4 pt-4 md:pl-5">
             <span className="text-white text-sm mb-1 block">Filter by Region</span>
             <select
                 value={selectedRegion}
@@ -55,14 +55,14 @@ function Body() {
             </select>
         </label>
 
-        <label className="block w-full md:w-1/2 mb-4 pt-10 pl-10">
+        <label className="block w-3/4 md:w-1/2 mb-4 pt-10 md:pl-5">
             <span className="text-white text-sm mb-1 block">Where are you from?</span>
             <input
                 type="text"
                 placeholder="Enter your country"
                 name="text"
                 onChange={handleChange}
-                value={searchResult.text}
+                value={searchResult}
                 className="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
         </label>
@@ -85,25 +85,25 @@ function Body() {
         </CardRow> 
 
       <CardRow >
-          { countries.map((country, index)=> index <= 10 && (
+          { countries.slice(0, 11).map((country, index)=>(
           <Card key={index} country= {country} />
       ))}
       </CardRow>
 
       <CardRow> 
-          { countries.map((country, index)=> index > 10 && index <= 20 && (
+          { countries.slice(11, 21).map((country, index)=>(
               <Card key={index} country= {country} />
           ))}
       </CardRow>
 
       <CardRow>
-      { countries.map((country, index)=> index > 20 && index <= 30 && (
+      { countries.slice(21, 31).map((country, index)=>(
           <Card key={index} country= {country} />
       ))}
       </CardRow> 
 
       <CardRow>
-      { countries.map((country, index)=> index > 30 && index <= 40 && (
+      { countries.slice(31, 41).map((country, index)=>(
           <Card key={index} country= {country} />
       ))}
       </CardRow> 

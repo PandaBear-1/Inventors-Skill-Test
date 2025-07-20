@@ -13,8 +13,8 @@ function Card(props) {
 
 
   return (
-        <div className='inline-block m-2 md:m-3 cursor-pointer min-w-[250px] group ' >
-            <img loading='lazy' src={props.country.flags.png} className='w-[130px] md:w-[240px] h-[140px] 
+        <div className='inline-block m-2 md:m-3 cursor-pointer min-w-[190px] md:min-w-[250px] group ' >
+            <img loading='lazy' src={props.country.flags.png} className='w-[170px] md:w-[240px] h-[110px] md:h-[140px] 
             object-cover rounded-2xl  group-hover:scale-110 border-gray-400 p-2 transition-all 
             duration-100 ease-in-out' />
 

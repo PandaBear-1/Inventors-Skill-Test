@@ -17,7 +17,7 @@ function CardRow({children, showButtons = true}) {
 
   return (
     <div className='flex items-center' >
-     { showButtons && <IoChevronBack onClick={()=> slideLeft(elementRef.current)} className='text-[40px] text-white
+     { showButtons && <IoChevronBack onClick={()=> slideLeft(elementRef.current)} className='hidden md:block text-[40px] text-white
           bg-black cursor-pointer p-2 rounded-full mb-[120px] mr-[-40px] z-10 ' />}
       <div ref={elementRef} className='w-full mt-1 flex overflow-scroll scroll-smooth overflow-x-auto
           whitespace-nowrap scrollbar-hide ' >
@@ -25,7 +25,7 @@ function CardRow({children, showButtons = true}) {
       {children}
 
       </div>
-      { showButtons && < IoChevronForward onClick={()=>slideRight(elementRef.current)} className='text-[40px] text-white bg-black cursor-pointer
+      { showButtons && < IoChevronForward onClick={()=>slideRight(elementRef.current)} className='hidden md:block text-[40px] text-white bg-black cursor-pointer
         p-2 rounded-full mb-[120px] ml-[-40px] z-10 ' />}
     </div>
   )
